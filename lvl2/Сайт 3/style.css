@@ -1,0 +1,507 @@
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url(fonts/CormorantInfant-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url(fonts/CormorantInfant-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url(fonts/CormorantInfant-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url(fonts/CormorantInfant-SemiBold.ttf);
+    font-weight: 700;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Infant', serif;
+}
+html{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 8rem;
+    font-weight: 300;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 400;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+.header-conteiner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-conteiner video{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 4%;
+}
+
+.header-img{
+    display: none;
+}
+
+.header-top{
+    height: 50%;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.2s;
+}
+
+.header-bottom{
+    height: 50%;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transition: 0.2s;
+}
+
+.header-title{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    color: #787878;
+    letter-spacing: 0.66em;
+    cursor: default;
+}
+
+.header-conteiner:hover .header-top{
+    transform: translateY(-90%);
+}
+.header-conteiner:hover .header-bottom{
+    transform: translateY(90%);
+}
+
+.header-button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30%;
+    border-radius: 20px;
+    padding: 41px 130px;
+    z-index: 3;
+    border: none;
+    color: white;
+    background: #8d4545;
+    font-size: 1rem;
+    transition: 0.1s;
+}
+
+.header-button::before{
+    content: url(img/icons/flag-left.png);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -80px;
+}
+
+.header-button::after{
+    content: url(img/icons/flag-right.png);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: -80px;
+}
+
+.header-button:hover{
+    background: #743838;
+    transform: translateX(-50%) scale(1.1);
+}
+
+.navigation{
+    width: 130px;
+    height: 100vh;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.25);
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 15px;
+}
+
+.nav-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item{
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-item::before{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background: white;
+    width: 0;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.nav-item:first-of-type::before{
+    content: "Главная";
+
+}
+
+.nav-item:nth-last-of-type(2)::before{
+    content: "История";
+}
+
+.nav-item:nth-last-of-type(3)::before{
+    content: "Этапы";
+}
+
+.nav-item:last-of-type::before{
+    content: "Модели";
+}
+
+.nav-item:hover::before{
+    padding: 15px 55px;
+    border: 1px solid black;
+    background: #8d4545;
+    width: 100px;
+    color: white;
+    transform: translate(-100%, -50%);
+    transition: 0.2s;
+}
+
+.nav-item:hover img{
+    transform: scale(0.9);
+    background: #8d4545;
+    transition: 0.2s;
+}
+
+.history{
+    width: 100%;
+    min-height: 700px;
+    padding: 100px 0;
+}
+
+.history-conteiner{
+    max-width: 1440px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.history-left{
+    width: 50%;
+}
+.history-right{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}    
+
+.history-title::first-letter{
+    font-size: 4rem;
+}
+
+.history-text{
+    color: #848484;
+}
+
+.history-text::first-line{
+    color: black;
+    font-weight: bold;
+}
+
+.history-img{
+    animation: pickchange 12s linear 0s infinite;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2100px;
+}
+
+.stages-conteiner{
+    max-width: 1440px;
+    width: 100%;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.stages-title::first-letter{
+    font-size: 4rem;
+}
+
+.stages-text{
+    font-size: 45px;
+}
+
+.date-stages{
+    color: grey;
+}
+
+.models{
+    width: 100%;
+    padding: 100px 0;
+}
+
+.models-content{
+    max-width: 1440px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.models-title{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.models-title::first-letter{
+    font-size: 4rem;
+}
+
+.models-item{
+    width: fit-content;
+    position: relative;
+}
+.models-item:nth-of-type(2n+1){
+    margin-left: auto;
+}
+
+.models-list{
+    list-style: none;
+}
+
+.model-item-desk{
+    position: absolute;
+    width: fit-content;
+    max-width: 700px;
+    top: 50%;
+    padding: 45px 58px;
+    background-color: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    cursor: default;
+}
+
+.models-item:nth-of-type(2n) .model-item-desk{
+    right: 0;
+    transform: translate(90%, -50%);
+}
+
+.models-item:nth-of-type(2n+1) .model-item-desk{
+    left: 0;
+    transform: translate(-90%, -50%);
+}
+
+.model-item-desk::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+}
+
+.model-item-desk::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+}
+
+.model-item-desk:hover::before, .model-item-desk:hover::after{
+    width: 100%;
+}
+
+.model-item-desk p{
+    margin-top: 20px;
+    color: #848484;
+}
+
+.model-item-desk p::first-letter{
+    color: black;
+    font-weight: bold;
+}
+
+.footer{
+    width: 100%;
+    padding: 100px 0;
+}
+
+.footer-content{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    height: 40vh;
+}
+
+.footer-text{
+    vertical-align: center;
+}
+
+/*Анимации*/
+@keyframes pickchange {
+    0%{left: 0;}
+    33%{left: -693px;}
+    66%{left: -1386px;}
+    100%{left: -2100px;}
+}
+
+
+/*Адаптивность*/
+@media(max-width: 700px){
+    .navigation{
+        height: 80px;
+        width: 100%;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    }
+    .nav-items{
+        flex-direction: row;
+    }
+    .nav-item{
+        width: 55px;
+        height: 55px;
+    }
+    .nav-item img{
+        width: 100%;
+        height: 100%;
+    }
+    .nav-item :first-of-type{
+        margin-right: auto;
+    }
+    .nav-item:hover::before{
+        display: none;
+    }
+    .nav-item:hover img{
+        transform: scale(1);
+        background: white;
+    }
+    .header-conteiner:hover .header-top{
+        transform: translateY(0);
+    }
+    .header-conteiner:hover .header-bottom{
+        transform: translateY(0);
+    }
+    .header-conteiner video{
+        display: none;
+    }
+
+    html{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    h1{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    h2{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    h3{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .header-img{
+        display: block;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+    }
+    .header-title{
+        top: 20%;
+    }
+    .header-bottom{
+        bottom: 5%;
+    }
+    .history{
+        padding: 25px 30px;
+    }
+    .history-conteiner{
+        flex-direction: column-reverse;
+    }
+    .stages{
+        padding: 25px 30px;
+    }
+    .models{
+        padding: 25px 30px;
+    }
+    .models-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .model-item-desk{
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid black;
+        margin-top: 10px;
+    }
+    .models-item:nth-of-type(2n) .model-item-desk{
+        transform: translate(0,0);
+    }
+    .models-item:nth-of-type(2n+1) .model-item-desk{
+        transform: translate(0,0);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

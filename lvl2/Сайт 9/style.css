@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-ExtraBold.ttf) format("opentype");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Bold.ttf) format("opentype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Regular.ttf) format("opentype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-ExtraBoldItalic.ttf) format("opentype");
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-BoldItalic.ttf) format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Italic.ttf) format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root{
+    --main-bg-color: #ed6666;
+    --actent-color: #6bbdeb;
+    --font-white: #ffffff;
+    --font-black: #000000;
+    --gradient-color: #c15555;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 900;
+}
+
+h2{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 900;
+}
+
+p{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, var(--main-bg-color) 0%, var(--gradient-color) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--font-white);
+    justify-content: space-around;
+}
+
+.logo{
+    background-color: var(--actent-color);
+}
+
+.menu__icon{
+    background-color: var(--actent-color);
+    color: var(--font-white);
+    position: relative;
+}
+
+.burger-item{
+    background-color: var(--actent-color);
+}
+
+.nav-conteiner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--actent-color);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.logo-icon{
+    position: relative;
+}
+
+.logo-icon::before{
+    content: "С.Д";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(250%, -50%);
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 5px;
+}
+
+.menu__icon::after{
+    content: "меню";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 5px;
+}
+
+.nav-burger-togle:checked ~ .burger-body{
+    transform: scale(1);
+}
+
+.burger-body{
+    transform: scale(0);
+    position: fixed;
+    right: 0;
+    top: 120px;
+    background: var(--actent-color);
+    height: calc(100vh - 120px);
+    width: 100%;
+    transition: 0.5s;
+    transform-origin: top right;
+}
+
+.nav-burger-togle:checked ~ .menu__icon::after{
+    content: "закрыть";
+}
+
+.menu-item{
+    display: block;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--font-white);
+    margin-right: 27px;
+    margin-bottom: 40px;
+}
+.nav-burger-togle{
+    position: fixed;
+    top: 40px;
+    right: 1px;
+    width: 100px;
+    height: 48px;
+    z-index: 10;
+    opacity: 0;
+}
+
+.about-p{
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.title-h2{
+    color: var(--actent-color);
+}
+
+.card-page2{
+    padding: 20px;
+    background-color: var(--font-white);
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content: space-between;
+}

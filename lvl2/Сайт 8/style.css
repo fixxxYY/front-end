@@ -1,0 +1,298 @@
+@font-face {
+    font-family: 'play';
+    src: url("fonts/Play-Regular.ttf") format("opentype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'play';
+    src: url("fonts/Play-Bold.ttf") format("opentype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'DeathStar';
+    src: url("fonts/DeathStar-VmWB.ttf") format("opentype");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 20px;
+}
+h1{
+    font-size: 3rem;
+    line-height: 3rem;
+}
+h2{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+h3, p{
+    font-size: 1rem;
+    line-height: 1rem;
+}
+body{
+    background: url(img/starsBg.png) center/cover repeat-y;
+}
+.header{
+    width: 100%;
+    max-width: 1000px;
+    height: 70vh;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    perspective: 7rem;
+    /*perspective-origin: 100%;*/
+}
+
+.header-title{
+    font-family: DeathStar;
+    color: white;
+    margin-top: 22px;
+}
+
+.muving-path{
+    font-size: 2rem;
+    color: #f1c837;
+    font-family: play, sans-serif;
+    line-height: 4rem;
+    animation: move-text 25s linear 0s infinite;
+}
+.header-text{
+    transform: rotateX(45deg);
+    overflow: hidden;
+}
+
+.togle{
+    margin: 88px auto 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.togle-title{
+    font-family: play, sans-serif;
+    color: white;
+    margin-bottom: 39px;
+}
+
+.togle-button{
+    width: 293px;
+    height: 62px;
+    background: #51c3e7;
+    box-shadow: 0 0 30px #51c3e7;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    margin-bottom: 55px;
+}
+
+.togle-button::before{
+    content: "jedi";
+    font-family: DeathStar;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.togler:checked~.togle-button{
+    background: #000000;
+    box-shadow: 0 0 30px #ff3333;
+}
+.togler:checked~.togle-button::before{
+    content: "sith";
+}
+
+.togler{
+    position: absolute;
+    top: 70px;
+    z-index: 4;
+    width: 293px;
+    height: 62px;
+    opacity: 0;
+    perspective: 33rem;
+}
+
+.togle-content{
+    width: 100%;
+    height: 100vh;
+    border-radius: 30px;
+    position: relative;/* + */
+    transform-style: preserve-3d;/* + */ 
+    transition: 1s;
+}
+
+.togle-jedi{
+    background: url(img/obiwan.png) center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    font-family: "play", sans-serif;
+    overflow: hidden;
+}
+
+.togle-sith{
+    background: url(img/darthwaider.png) center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;/* + */
+    top: 0;/* + */
+    left: 0;/* + */
+    transform: rotateY(180deg);/* + */
+    backface-visibility: hidden;/* + */
+    border-radius: 30px;
+    font-family: "play", sans-serif;
+    overflow: hidden;
+}
+
+.togler:checked ~ .togle-content{
+    transform: rotateY(180deg);
+}
+
+
+.jedi-logo, .sith-logo{
+    position: absolute;
+    top: 23px;
+    left: 23px;
+}
+
+.jedi-planet, .sith-planet{
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    display: flex;
+    flex-direction: column;
+    height: 468px;
+    width: 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    transform: rotate(90deg);
+    transition: 0.3s;
+    transform-origin: top right;
+}
+
+.jedi-planet img, .sith-planet img{
+    width: 260px;
+    height: 260px;
+    margin: 35px auto;
+}
+
+.jedi-title, .jedi-subtitle{
+    color: #51c3e7;
+}
+.jedi-text{
+    color: #535353;
+    margin-bottom: 20px;
+}
+
+.jedi-discription{
+    position: absolute;
+    width: 472px;
+    min-height: 620px;
+    bottom: 23px;
+    left: 23px;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 30px;
+    text-align: left;
+    transform: scale(0);
+    transition: 0.3s;
+    transform-origin: bottom left;
+}
+
+.jedi-discription hr{
+    margin: 15px 0;
+    width: 287px;
+    border: 3px solid #51c3e7;
+    border-radius: 30px;
+}
+
+.jedi-title{
+    margin-bottom: 54px;
+}
+
+.sith-title, .sith-subtitle{
+    color: #FF7676;
+}
+
+.sith-text{
+    color: #535353;
+}
+
+.sith-description{
+    position: absolute;
+    width: 472px;
+    min-height: 620px;
+    bottom: 23px;
+    left: 23px;
+    background: black;
+    border-radius: 30px;
+    padding: 30px;
+    text-align: left;
+    transform: scale(0);
+    transition: 0.3s;
+    transform-origin: bottom left;
+}
+
+.sith-description hr{
+    margin: 15px 0;
+    width: 287px;
+    border: 3px solid #FF7676;
+    border-radius: 30px;
+}
+
+.sith-planet{
+    background: black;
+}
+
+.sith-title{
+    margin-bottom: 54px;
+}
+
+.jedi-logo:hover ~ .jedi-discription{
+    transform: scale(1);
+}
+
+.jedi-logo:hover ~ .jedi-planet{
+    transform: rotate(0);
+}
+
+.sith-logo:hover ~ .sith-description{
+    transform: scale(1);
+}
+
+.sith-logo:hover ~ .sith-planet{
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes move-text {
+    0%{
+        transform: translateY(50);
+    }
+    100%{
+        transform: translateY(-120%);
+    }
+}

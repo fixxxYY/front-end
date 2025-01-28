@@ -1,0 +1,264 @@
+
+@font-face {
+    src: Demode-Negative;
+    src: url(font/Demode-Negative.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    cursor: default;
+}
+body{
+    background: #ffffff;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 30px;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.3rem;
+}
+p, label, details{
+    font-size: 1rem;
+}
+.siteBody {
+    background: #1a1a1a;
+    max-width: 1400px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.85);
+}
+
+/* Первая секция (Шапка) */
+.header {
+    margin-bottom: 150px;
+}
+
+.headerTitle{
+    font-family: DemodeNegative;
+    background: #17661E;
+    color: #32B73E;
+}
+.videoContainer {
+    position: relative;
+}
+.videoCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #1a1a1a;
+    transition: 0.3s;
+}
+.gamepad {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.videoContainer:hover .videoCover{
+    width: 0;
+}
+.videoContainer:hover .gamepad{
+    transform: translate(-50%, 90px);
+}
+
+
+
+
+
+/* Вторая секция */
+.avalible {
+    width: 100%;
+    background: #17661E;
+    padding-bottom: 50px;
+   
+}
+.avalibleHeader {
+    background: #459F4D;
+    padding: 20px 0;
+}
+.avalibleCards {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* Третья секция */
+
+.bonus {
+    margin: 50px 0;
+}
+.bonusTitle {
+    margin-bottom: 50px;
+}
+.bonusAnimationContainer {
+    position: relative;
+    height: 500px;
+    background: url('images/xbox.png') right/contain no-repeat;
+}
+
+.haloHead{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: head-move 5s linear 5s infinite backwards; 
+}
+.bonusCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bonusCard {
+    width: 33%;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+
+.bonusCard p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+
+.bonusCard:nth-of-type(2n) p{
+    background:rgba(23, 102, 30, 0.5);
+}
+
+.bonusCard:nth-of-type(2n+1) p{
+    background: rgba(255, 255, 255, 0.5);
+}
+.bonusCard:hover{
+    transform: scale(0.9);
+}
+
+.bonusCard:hover p{
+    transform: translateY(0);
+}
+
+/* Последняя карточка */
+
+.bonusCard:last-of-type{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.bonusCard:last-of-type p{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: none;
+    transform: translate(0, 0);
+}
+
+.bonusCard:last-of-type:hover{
+    transform: none;
+}
+
+.bonusCard:last-of-type:hover p{
+    transform:translate(0, 0);
+}
+
+/* Последняя секция (Форма) */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.form input, .form select{
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    background: #0c0c0c;
+    padding: 10px;
+    outline: none;
+    color: white;
+    transition: 0.3s;
+}
+/* Тут ошибка. Что-то не так с селектором. */
+.form input:focus, .form select:focus{
+    transform: scale(1.1);
+    border: 2px solid #17661E;
+}
+.form label{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.buyPass {
+    width: 501px;
+    height: 80px;
+    background: #17661E;
+    color: white;
+    font-weight: 700;
+    margin: 50px auto;
+    font-size: 30px;
+    border: none;
+    transition: 0.3s;
+}
+.buyPass:hover{
+    transform: scale(1.1);
+}
+
+/* ФУТЕР */
+.footer {
+    font-size: 50px;
+    padding: 200px 0;
+    background: black;
+    margin-top: 50px;
+}
+
+/* Анимация */
+@keyframes head-move {
+    0%{ 
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+   80%{
+        top: 50%;
+        left:800px;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    100%{
+        top: 50%;
+        left:1000px;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}

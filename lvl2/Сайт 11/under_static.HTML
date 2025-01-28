@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            display: flex;
+        }
+        .card{
+            position: relative;
+            background: #3da077;
+            display: flex;
+            margin: 100px;
+
+        }
+        .back, .front{
+            outline: 1px solid white;
+        }
+        .back{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to right, red, yellow, green, blue);
+        }
+        .front{
+            z-index: 2;
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .card>(.back>lorem1+.front>lorem2)-->
+    <div class="card">
+        <div class="back">Lorem.</div>
+        <div class="front">wertt, ipsum.</div>
+    </div>
+
+
+</body>
+
+</html>

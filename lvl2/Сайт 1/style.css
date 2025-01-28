@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-Black.ttf) format("opentype");
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-Bold.ttf) format("opentype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-Regular.ttf) format("opentype");
+    font-weight: 400;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+html{
+    font-size: 25px;
+}
+
+
+h1{
+    font-size: 10rem;
+    line-height: 10rem;
+    font-weight: 900;
+}
+h2{
+    font-size: 5rem;
+    line-height: 5rem;
+}
+h3{
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.title-bottom p{
+    font-size: 10rem;
+    line-height: 10rem;
+    font-weight: 900;
+    position: relative;
+    top: -5rem;
+    color: #6a32e2;
+}
+
+.header{
+    width: 100%;
+    height: 80vh;
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.header-subtitle{
+    width: 100%;
+    padding: 15px 122px;
+    text-align: center;
+    color: white;
+    background-color: #2e292a;
+}
+
+.header-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.title-top{
+    height: 5rem;
+    overflow: hidden;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.title-bottom{
+    height: 5rem;
+    overflow: hidden;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.title-top h1{
+    color: #f266cb;
+}
+
+
+.header-title:hover .title-top{
+    margin-bottom: 7rem;
+}
+
+.fame-hall{
+    max-width: 1440px;
+    width: 100%;
+    height: 80vh;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.fame-hall-cards{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.fame-hall-card-item{
+    flex-grow: 1;
+    height: 432px;
+    transition: 0.5s;
+}
+.fame-hall-card-item:first-of-type{
+    background: linear-gradient(0deg, rgba(230, 120, 18, 0.5), rgba(230, 120, 18, 0.5)), url(img/back_to_the_future.png) center/cover no-repeat;
+}
+.fame-hall-card-item:nth-of-type(2){
+    background: linear-gradient(0deg, rgba(39, 177, 221, 0.55), rgba(39, 177, 221, 0.55)), url(img/forest_g.png) center/cover no-repeat;
+}
+.fame-hall-card-item:nth-of-type(3){
+    background: linear-gradient(0deg, rgba(69, 187, 131, 0.25), rgba(69, 187, 131, 0.25)), url(img/matrix.png) center/cover no-repeat;
+}
+.fame-hall-card-item:nth-of-type(4){
+    background: linear-gradient(0deg, rgba(69, 104, 228, 0.55), rgba(69, 104, 228, 0.55)), url(img/star_wars.png) center/cover no-repeat;
+}
+.fame-hall-card-item:last-of-type{
+    background: linear-gradient(0deg, rgb(238, 184, 45, 0.6), rgba(238, 184, 45, 0.6)), url(img/lotr.png) center/cover no-repeat;
+}
+
+
+.fame-hall-card-item:hover{
+    flex-grow: 10;
+}
+
+.fame-hall-title{
+    margin-bottom: 25px;
+}
+
+.fame-hall-link{
+    text-decoration: none;
+    color: #2e292a;
+    display: block;
+    width: fit-content;
+    padding: 5px;
+    margin-left: auto;
+}
+
+.galery{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 80vh;
+    height: 100%;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.galery-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+}
+.galery-item{
+    width: 330px;
+    height: 479px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s;
+}
+
+.galery-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: #1c1b1bcc;
+    backdrop-filter: blur(20px);
+    color: white;
+    text-align: center;
+    padding: 17px;
+    bottom: -80%;
+    transform: 0.4s;
+}
+
+.title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.genere{
+    font-size: 1rem;
+    margin-top: 45px;
+    
+}
+.genere span{
+    color: #47b197;
+}
+
+.by-button{
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    padding: 16px 0 ;
+    background: #47b198;
+    margin-top: 45px;
+}
+
+.galery-img{
+    transition: 0.4s;
+}
+
+.galery-item:hover{
+    transform: scale(0.8);
+}
+.galery-item:hover .galery-img{
+    transform: scale(1.5);
+}
+
+.galery-item:hover .galery-content{
+    transform: translateY(-100%);
+}
+
+footer{
+    width: 100%;
+    height: 492px;
+    background-color: #2e292a;
+    font-weight: 900;
+    padding: 217px 0 ;
+    text-align: center;
+    color: white;
+}

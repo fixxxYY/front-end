@@ -1,0 +1,20 @@
+.p1{
+    width: 100%;
+    height: 900px;
+    max-width: 1920px;
+    display: grid;
+
+}
+.card:first-child{
+    background-image: url("img/header1.png");
+}
+.card:nth-child(2){
+    background-image: url("img/header2.png");
+}
+.card:nth-child(3){
+    background-image: url("img/header3.png");
+}
+.card:nth-child(4){
+    background-color: green;
+
+}

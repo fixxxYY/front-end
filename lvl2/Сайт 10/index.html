@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a rel="icon" href="img/favicon.ico" type="image/x-icon"></a>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c131d0d17a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <input type="checkbox" class="nav__toggler">
+            <a href="#header" class="nav__logo">
+                <p>Lamp<br>Logo</p>
+                <svg width="35" height="52" viewBox="0 0 35 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 27H28V41C28 47.0751 23.0751 52 17 52C10.9249 52 6 47.0751 6 41V27Z" fill="#878787"/>
+                    <path d="M20 49.5C28 47.1 27 36.8333 25.5 32L21 34C25.4 39.2 22.1667 46.5 20 49.5Z" fill="#5C5C5C"/>
+                    <circle cx="17.5" cy="17.5" r="17.5" fill="white"/>
+                </svg>
+            </a>
+            <div class="nav__menu-button">
+                <p class="nav__button-text">Menu</p>
+            </div>
+            <div class="nav__body">
+                <a href="#cards">Секция 1</a>
+                <a href="#description">Секция 2</a>
+                <a href="#form">Секция 3</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header" id="header">
+        <div class="header__container">
+            <h1 class="header__text">
+                Умные лампы для дома
+            </h1>
+            <div class="header__img">
+                <img src="img/lamp-header.png" class="header__lamp">
+                <div class="header__lamp-light"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="cards" id="cards">
+            <div class="cards__container">
+                <div class="cards__card">
+                    <input type="checkbox" class="cards_toggler">
+                    <div class="cards__rotated-part">
+                        <div class="card__front">
+                            <i class="fa-solid fa-building fa-7x card_white"></i>
+                            <p class="card__front-text">Для офисов</p>
+                        </div>
+                        <div class="card__back">
+                            <p class="card__back-text">Освещение офисных помещений  не вызовет никаких нареканий</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__card">
+                    <input type="checkbox" class="cards_toggler">
+                    <div class="cards__rotated-part">
+                        <div class="card__front">
+                            <i class="fa-solid fa-home fa-7x card_white"></i>
+                            <p class="card__front-text">Для дома</p>
+                        </div>
+                        <div class="card__back">
+                            <p class="card__back-text">Считается, что белый свет способствует повышению работоспособности</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__card">
+                    <input type="checkbox" class="cards_toggler">
+                    <div class="cards__rotated-part">
+                        <div class="card__front">
+                            <i class="fa-solid fa-leaf fa-7x card_white"></i>
+                            <p class="card__front-text">Экономия энергии</p>
+                        </div>
+                        <div class="card__back">
+                            <p class="card__back-text">Светильники для растений и сельского хозяйства</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__card">
+                    <input type="checkbox" class="cards_toggler">
+                    <div class="cards__rotated-part">
+                        <div class="card__front">
+                            <i class="fa-solid fa-recycle fa-7x card_white"></i>
+                            <p class="card__front-text">Подлежит переработке</p>
+                        </div>
+                        <div class="card__back">
+                            <p class="card__back-text">Светодиодные светильники для технических помещений </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="description" id="description">
+            <div class="description__container">
+                <h2 class= description__title>Тут просто немного текста о нас</h2>
+                <p class="description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cum incidunt neque quam commodi, qui iure aliquid laborum repudiandae sunt expedita cumque ullam illum tempora, corporis obcaecati quibusdam, officiis vitae!</p>
+            </div>
+        </section>
+
+        <section class="form" id="form">
+            <form action="#" class="form__container">
+                <h2 class="form__title">Форма для заказа</h2>
+                <input type="text" class="form__name" placeholder="Имя Фамилия">
+                <input type="number" class="form__phone" placeholder="Телефон">
+                <input type="text" class="form__adress" placeholder="Адрес Доставки">
+                <button class="form__submit">Заказать</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

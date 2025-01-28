@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "RussoOne";
+    src: url(fonts/RussoOne-Regular.ttf) format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SpiderMan";
+    src: url(fonts/Spider-Man.otf) format("opentype");
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.image-grid {
+    font-family: "RussoOne";
+    display: grid;
+    grid-template-areas:
+            'morales morales gwen gwen'
+            'parker parker gwen gwen'
+            'parker parker spiderpig .'
+            'noir penni penni spiderbot'
+            'noir trio trio trio'
+            'all-team all-team all-team all-team'
+            'all-team all-team all-team all-team'
+            '.  versus versus versus'
+            'kingpin kingpin kingpin freefall'
+            'kingpin kingpin kingpin freefall'
+            'kingpin kingpin kingpin .'
+;
+    width: 942px;
+    /*height: 2592px;*/
+    grid-auto-rows: 217px;
+    background-color: black;
+    color: white;
+    font-size: 50px ;
+    font-weight: bold;
+    gap: 20px;
+
+
+}
+
+.image-grid>div{
+    background-size: cover;
+}
+
+
+
+.morales {
+    grid-area: morales;
+    background-image: url("img/morales.png");;
+
+}
+
+.parker {
+    grid-area: parker;
+    background-image: url("img/parker.png");;
+
+}
+
+.gwen {
+    grid-area: gwen;
+    background-image: url("img/gwen.png");;
+}
+
+.spiderpig {
+    grid-area: spiderpig;
+    background-image: url("img/spiderpig.png");;
+}
+
+.noir {
+    grid-area: noir;
+    background-image: url("img/noir.png");;
+}
+
+.penni {
+    grid-area: penni;
+    background-image: url("img/penni.png");;
+}
+
+.spiderbot {
+    grid-area: spiderbot;
+    background-image: url("img/spiderbot.png");;
+}
+
+.trio {
+    grid-area: trio;
+    background-image: url("img/trio.png");;
+}
+
+.all-team {
+    grid-area: all-team;
+    background-image: url("img/allteam.png");;
+    display: flex;
+
+}
+
+.morales, .parker, .gwen, .spiderpig, .noir, .penni, .spiderbot{
+    font-family: "SpiderMan";
+    text-shadow: 0 0 50px red;
+}
+
+.all-team>h2{
+    background-color: rgba(0, 0, 0, 0.71);
+
+    display: flex;
+    align-items: center;
+    padding: 0 37px;
+
+}
+
+.versus {
+    grid-area: versus;
+    background-image: url("img/versus.png");;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+.kingpin {
+    grid-area: kingpin;
+    background-image: url("img/kingpin.png");;
+}
+
+.freefall {
+    grid-area: freefall;
+    background-image: url("img/freefall.png");;
+}
